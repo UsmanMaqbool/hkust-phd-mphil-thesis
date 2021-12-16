@@ -31,7 +31,7 @@ We used single bib file `Thesis.bib` which has all the references. Each chapter 
 
 If the references are not generated successfully, or you are facing problem with a particular chapter. 
 
-**For example:** If chapter 2 references are not updating after the compilation. To fix this, you have to open the `chapter2.aux' in the tex studio, and press` <kbd>F8</kbd>, so that the references could be updated. Afterwards you will be able to compile them easily.
+**For example:** If chapter 2 references are not updating after the compilation. To fix this, you have to open the `chapter2.aux` in the tex studio, and press <kbd>F8</kbd>, so that the references could be updated. Afterwards you will be able to compile them easily.
 
 
 
