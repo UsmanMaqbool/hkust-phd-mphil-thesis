@@ -1,0 +1,158 @@
+\pagenumbering{roman}
+
+\addcontentsline{toc}{chapter}{Title Page}
+
+\null\vspace{0.5in}
+\begin{center}
+{\Large\bf Towards a Swift Multiagent SLAM System for Large-Scale Robotics Applications}
+\vspace{2.5cm}
+
+{\large by}
+\vspace{0.5cm}
+
+{\large\bf \thesisWriter{}}\normalsize
+\vspace{2.5cm}
+
+A Thesis Submitted to \\
+The Hong Kong University of Science and Technology \\
+in Partial Fulfillment of the Requirements for \\
+the Degree of Doctor of Philosophy \\
+in the Department of Electronic and Computer Engineering
+\vspace{1.5cm}
+
+February 2021, Hong Kong
+\end{center}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Authorization Page}
+\begin{center}{\Large\bf Authorization}\normalsize
+\end{center}
+\vspace{0.5cm}
+
+I hereby declare that I am the sole author of the thesis.
+
+\vspace{0.5cm}
+
+I authorize the Hong Kong University of Science and Technology to lend this thesis
+to other institutions or individuals for the purpose of scholarly research.
+
+\vspace{0.5cm}
+
+I further authorize the Hong Kong University of Science and Technology to
+reproduce the thesis by photocopying or by other means, in total or in
+part, at the request of other institutions or individuals for the
+purpose of scholarly research.
+
+\vspace{0.3cm}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.20]{includes/sig.png}
+\end{figure}
+\begin{center}
+\vspace*{-1.7cm}
+\line(1,0){180}
+\smallskip
+
+\thesisWriter{}
+
+February 2021
+\end{center}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Signature Page}
+\null\vspace{0.4cm}
+\begin{center}
+{\Large\bf Towards a Swift Multiagent SLAM System for Large-Scale Robotics Applications}
+\vspace{0.5cm}
+
+{\large by}\smallskip
+
+{\large\bf Muhammad Usman Maqbool Bhutta}\normalsize
+
+\vspace{0.5cm}
+
+This is to certify that I have examined the above PhD thesis and have found that it is complete and satisfactory in all respects, and that any and all revisions required by the thesis examination committee have been made.
+
+\vspace{0.4cm}
+
+\line(1,0){230} 
+
+Professor Ming Liu (ECE), Thesis Supervisor
+
+\vspace{0.4cm}
+
+\line(1,0){230} 
+
+Professor Bertram Emil Shi (ECE), Head of ECE Department
+
+\begin{flushleft}
+\textbf{Thesis Examination Committee} \vspace{0.1cm}
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.1}
+    \begin{tabular}{ll}
+	1. Professor Ming Liu & \multirow{2}{*}{Department of Electronic and Computer Engineering}\\
+	\quad(Thesis Supervisor) & ~  \\
+    2. Professor Wei Zhang & Department of Electronic and Computer Engineering\\
+    3. Professor Yiwen Wang & Department of Electronic and Computer Engineering\\
+    4. Professor Qiong Luo & Department of Computer Science \& Engineering\\
+    5. Professor Xiong Rong & College of Control Science and Engineering,\\
+    \quad(External Examiner) & Zhejiang University, Hangzhou, Zhejiang, China. 
+    \end{tabular}
+\end{table}
+\end{flushleft}
+Department of Electronic and Computer Engineering \\
+The Hong Kong University of Science and Technology \\
+February 2021
+\end{center}
+
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\begin{center}{\Large\bf Acknowledgment}\normalsize
+\end{center}
+\vspace{0.5cm}
+
+I would like to express my deep gratitude to my supervisor, Prof. Ming Liu who has given me a lot of advice and kindly support in my research during the years of my PhD study. I would like to thank The Punjab Educational Endowment Fund (PEEF) for providing me with the CMMS PhD scholarship award so I had the valuable opportunity to study here. This thesis and the work it embodies would not have been possible without the continual support of a number of individuals and organizations. I would like to take this opportunity to express my gratitude to everyone who has contributed to the fulfillment of this thesis. I want to gratefully acknowledge and express my appreciation to my supervisor, Prof. Ming Liu, for his invaluable guidance, full support and patience through my PhD studies. His outstanding attributes such as humility, diligence, enthusiasm and dedication, together with his amazing academic insights and on-going belief were constant sources of motivation for me. I am truly privileged to have had him as my supervisor. I would like to thank Prof. Roland Siegwart and Dr. Cesar Dario Cadena Lerma from the Autonomous Systems Lab, ETH Zürich, Switzerland for kindly welcoming me to visit their research group. The discussions with them stimulated many interesting ideas in my research area of place recognition. Thanks must go to The Hong Kong University of Science and Technology for providing the top up support to my PhD scholarship and overseas research scholarship along with a wealth of other supports during the most painful time of my life. It has been my great pleasure to carry out my PhD study in the RAM-LAB @ HKUST research group. I would like to thank everyone for making it friendly and providing desirable environment for research discussions. Special thanks should be given to the staff in the department administration for all their assistance and patience. I am deeply thankful to my amazing parents and for the way they raised me, without which it would be impossible to be who I am at the moment. Last, I would like to dedicate this thesis and everything I do to my love, who is always with me.
+
+\newpage
+\thispagestyle{empty}
+\null\vskip0.5in
+\begin{center}
+
+
+  \vspace{20mm}
+
+  \begin{LARGE}
+    \textit{To my family...}
+  \end{LARGE}
+
+  \vspace{4mm}
+
+
+
+\end{center}
+
+\vfill
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Table of Contents}
+
+\begin{spacing}{0.25}
+   {\footnotesize \tableofcontents}
+\end{spacing}
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+
+\newpage

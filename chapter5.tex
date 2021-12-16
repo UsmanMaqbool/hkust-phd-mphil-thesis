@@ -1,0 +1,148 @@
+\chapter{Tabls and Graphs}
+\label{sec-pslen}
+
+
+
+\section{Table}
+Table \ref{table-1} is shown below.
+
+You can also create different style of latex table using link \url{https://www.tablesgenerator.com/}.
+\begin{table*}[h]
+	\caption{Table I}
+	\centering
+	\renewcommand{\arraystretch}{1.2}%
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multirow{2}{*}{Method}                                   & \multirow{2}{*}{Type} & \multicolumn{3}{c|}{Tested On}                                                                  \\ \cline{3-5}
+
+		                                                          &                       & \multicolumn{1}{c|}{Recall@1}  & \multicolumn{1}{c|}{Recall@5} & \multicolumn{1}{c|}{Recall@10} \\
+		\hline
+		\hline
+		\multirow{2}{*}{Method 1}                                 & Type 1                & 44.76                          & 60.95                         & 70.16                          \\
+
+		                                                          & Type 2                & 52.70                          & 67.30                         & 73.02                          \\
+		\hline
+		\multirow{2}{*}{Method 2 \cite{arandjelovic2016netvlad} } & Type 1                & 60.00                          & 73.65                         & 79.05                          \\
+
+		                                                          & Type 2                & 58.73                          & 74.6                          & 80.32                          \\
+		\hline
+		\multirow{2}{*}{Method 3 \cite{zhu2018attention} }        & Type 1                & 61.90                          & 77.78                         & 80.95                          \\
+
+		                                                          & Type 2                & 66.98                          & 80.95                         & 83.81                          \\
+		\hline
+		Method 4
+		                                                          & Type 1                & 66.98                          & 80.95                         & \textbf{85.71}                 \\
+		(Ours)                                                    & Type 2                & \textbf{67.30}                 & \textbf{81.27}                & \textbf{85.71}                 \\
+
+
+		\hline
+	\end{tabular}
+	\label{table-1}
+\end{table*}
+
+
+\begin{table*}[]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\caption{Table II}
+	\label{table-2}
+	\begin{tabular}{||c|c|c|cc|cc||}
+		\hline
+		\multirow{2}{*}{\textbf{Method}} & \multirow{2}{*}{\textbf{Type}} & \multirow{2}{*}{\textbf{Number}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}\textbf{Total Time} \\ \textbf{Duration (sec)}\end{tabular}} & \multicolumn{2}{c||}{\textbf{Field 3}}                                                         \\ \cline{4-7}
+		                                  &                                &                                  & \begin{tabular}[c]{@{}c@{}}
+		                                  	Field \\
+		                                  	1
+		                                  \end{tabular}                      & \begin{tabular}[c]{@{}c@{}}Field \\ 2\end{tabular}            & \begin{tabular}[c]{@{}c@{}}Field 1 \\ Time (sec)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Field \\ 2\end{tabular} \\ \hline \hline
+		Method 1                               & Indoor                         & 2                                & 53.7                                           & 69                                   & 0.98                      & 2.4922                    \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Method \\ 2\end{tabular}         & Outdoor                        & 2                                & 73                                             & 74                                   & 0.89                      & 2.83519                   \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Method 3 \end{tabular}         & Outdoor                        & 2                                & 104                                            & 91                                   & 0.94                      & 1.7857                    \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Method 4 \end{tabular}         & \multirow{2}{*}{Outdoor}       & \multirow{2}{*}{3}               & 122                                            & 117                                  & 0.92                      & 1.2786                    \\ \cline{1-1}\cline{4-7}
+		\begin{tabular}[c]{@{}c@{}}Method 5 \end{tabular}        &                                &                                  & 122                                            & 112                                  & 0.867                     & 1.15                      \\ \hline
+	\end{tabular}%
+\end{table*}
+
+
+\begin{table*}[]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\caption{Table III}
+	\label{table-3}
+	\begin{tabular}{||c|c|cc|cc|cc||}
+		\hline
+		\multirow{2}{*}{\textbf{Benchmarks}} & \multirow{2}{*}{\textbf{Direction}} & \multicolumn{2}{c|}{\textbf{Method 1} \cite{Bhutta2018}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}\textbf{Method} \\ \textbf{2 }\cite{Kummerle2011}\end{tabular}} & \multicolumn{2}{c||}{\textbf{\begin{tabular}[c]{@{}c@{}}Method 3\\ (Proposed)\end{tabular}}}                                                                                        \\ \cline{3-8}
+		                                  &                                     & \begin{tabular}[c]{@{}c@{}}Time \\ (sec)\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}RMSE \\ (m)\end{tabular}                      & \begin{tabular}[c]{@{}c@{}}Time \\ (sec)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}RMSE \\ (m)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Time \\ (sec)\end{tabular} & \begin{tabular}[c]{@{}c@{}}RMSE \\ (m)\end{tabular} \\ \hline \hline
+		Benchmark 1                               & Same                                & 7.6                                                     & 0.1503                                          & 5.1                                                       & 0.0903                     & \textbf{2.53}              & \textbf{0.0290}            \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Benchmark\\ 2\end{tabular}        & Same                                & 8.8                                                     & 1.2453                                          & 5.5                                                       & 0.9832                     & \textbf{2.93}              & \textbf{0.0323}            \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Benchmark 3 \end{tabular}        & Same                                & 7.4                                                     & 1.5594                                          & 5.04                                                      & 0.0883                     & \textbf{2.47}              & \textbf{0.0486}            \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Benchmark 4 \end{tabular}        & Opposite                            & 9                                                       & 1.6                                             & 5.57                                                      & 0.207                      & \textbf{3}                 & \textbf{0.175}             \\ \hline
+		\begin{tabular}[c]{@{}c@{}}Benchmark 5 \end{tabular}        & Same                                & 11                                                      & 0.3613                                          & 6.24                                                      & 0.3073                     & \textbf{3.67}              & \textbf{0.0712}            \\ \hline
+	\end{tabular}%
+\end{table*}
+
+
+
+\section{Tikz styles Graphs}
+
+
+
+\begin{figure}[h]
+
+	\centering
+	\raggedright
+	\captionsetup[subfigure]{width=.95\linewidth}
+	\subfloat[Example 1]
+	{	\label{fig:Tikz-1}
+		\resizebox{.47\linewidth}{!}{
+			\begin{tikzpicture}[trim axis left]%
+				\begin{axis}
+					[curve plot style]
+
+					\addplot [color=blue, mark=diamond, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_maqbool_DT_50_512.dat};
+
+					\addplot [color=green, mark=square, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_maqbool_DT_100_512.dat};
+
+					\addplot [color=black, mark=asterisk, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_netvlad_512.dat};
+
+					\legend{CURVE-1$_{DT-50}$(ours), CURVE-2$_{DT-100}$(ours),CURVE-3}
+				\end{axis}
+			\end{tikzpicture}
+		}
+	}
+	\captionsetup[subfigure]{width=.95\linewidth}
+	\subfloat[Example 1]
+	{\label{fig:Tikz-2}
+		\resizebox{.47\linewidth}{!}{
+
+			\pgfplotsset{ymax=90, ymin= 64} %
+
+			\begin{tikzpicture}[trim axis left]%
+				\begin{axis}
+					[curve plot style]
+
+					\addplot [color=blue, mark=diamond, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_maqbool_DT_50_4096.dat};
+
+					\addplot [color=green, mark=square, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_maqbool_DT_100_4096.dat};
+
+					\addplot [color=black, mark=asterisk, mark size=3pt, line width=0.8pt]
+					table {data/vd16_pitts30k_to_tokyo247_netvlad_4096.dat};
+
+					\legend{CURVE-1$_{DT-50}$(ours), CURVE-2$_{DT-100}$(ours),CURVE-3}
+				\end{axis}
+			\end{tikzpicture}
+		}
+	}
+	\caption{\textbf{Note:} All the curves are in data folders and in `dat' file. Using `\textbf{pgfplotsset}', you can also control the y-axis. `\textbf{tikz\_styles.tex}' has all the further configuration.}
+	\label{fig:pitts2tokyo}
+\end{figure}
+
+
+\newpage
+\renewcommand*{\bibname}{\section{References}}
+\bibliographystyle{ieeetr}
+\bibliography{Thesis}
+

@@ -1,0 +1,65 @@
+\chapter{Equations and Algorithm}
+\label{sec-figures}
+
+\section{Equations and Algorithm}
+Let us assume $\gamma_{ij}$ is the number of matched keypoints among two keyframes, $i$ and $j$. These matches yield a distinct scale difference $\sigma_{ij} $ depending on the number of matched keypoints $\gamma_{ij}$. The optimal scale difference $\sigma^*$ will be
+\begin{equation}
+	\begin{aligned}
+		\sigma^* &= \operatorname*{argmax}_{\gamma} \frac{1}{2}|\gamma(\sigma_{ij}), \gamma(\sigma_{i'j'}) | ,
+	\end{aligned}
+	\label{eqa-1}
+\end{equation} 
+where $\sigma_{ij} $ and $\sigma_{i'j'}$ are the two nearest points such that\\
+\begin{equation}
+	\begin{split}
+		\quad |\sigma_{ij} - \sigma_{i'j'}| \leq \Delta^* \quad \forall \quad i, j, i' \text{ and } j' \in \mathds{Z}^+, \quad \Delta^* \in \mathbb{R}.
+	\end{split}
+	\label{eqa-1}
+\end{equation} 
+The estimation is further explained in Algorithm \ref{algorithm-1}.\\
+
+\begin{algorithm}[!h]
+	\SetKwInput{KwData}{Input}
+	\SetKwInput{KwResult}{Output}
+	\KwData{Matched keyframes $\mathbf{K}_{r_{ID}} = \{\mathbf{K}^i_{s},\mathbf{K}^j_{t}\}$ , poses $^w\mathbf{T}_{r_{ID}} = \{^w\mathbf{T}_{s}, \, ^w\mathbf{T}_{t} \}$, point clouds $P_{r_{ID}}^\mathcal{F} = \{P^{\mathcal{F}_s^i}_{s(i)},P^{\mathcal{F}_t^j}_{t(j)}$\} with $i,j \in \mathds{Z}^+$ }
+	\KwResult{Optimal scale difference $\sigma^*$, initial guess relative transformation $^{si}\mathbf{T}_{ti}^{IG}$ }
+	initialization\;
+	\For{$z = -1:1$} {
+		$ P_{s(i+z)}^{\mathcal{F}_w} = \,^w\mathbf{T}_{s(i+z)} (P^{\mathcal{F}_{s(i+z)}}_{s(i+z)}) $ \;
+		$ P_{t(j+z)}^{\mathcal{F}_w} = \,^w\mathbf{T}_{t(j+z)} (P^{\mathcal{F}_{t(j+z)}}_{t(j+z)}) $ \;
+		\SetKwFunction{FMain}{ PCR-Pro \cite{Bhutta2018}}
+		\SetKwProg{Fn}{Function}{:}{}
+		\Fn{\FMain{$\mathbf{K}_{r_{ID}}$,$P_{r_{ID}}^{\mathcal{F}_w}$}}{
+			Estimate volume ratio $r_{vol}$ of $P_{s(i+z)}^{\mathcal{F}_w}, P_{t(j+z)}^{\mathcal{F}_w}$ \;
+			$^{s(i+z)}\mathbf{T}_{t(j+z)}^{RC} \longleftarrow \gamma_z \longleftarrow \mathbf{K}^{i+z}_{s},\mathbf{K}^{j+z}_{t} $ \; 
+			$ \sigma_z \longleftarrow ^{s(i+z)}\mathbf{T}_{t(j+z)}^{RC} , \gamma_z, ^w\mathbf{T}_{s(i+z)} , ^w\mathbf{T}_{t(j+z)} $\;
+			$^{s(i+z)}\mathbf{T}_{t(j+z)}^{IG} \longleftarrow \sigma_z, P_{s(i+z)}^{\mathcal{F}_w},P_{t(j+z)}^{\mathcal{F}_w} $ \;
+			\KwRet $\sigma_z, ^{s(i+z)}\mathbf{T}_{t(j+z)}^{IG} $ \; }
+	}
+	\eIf{$r_{vol} > 0.5$}{
+		$\Delta^* = 5 $\;
+		\For{$x = -1: 1$}{
+			\For{$y = -1: 1$}{
+				\If{$x \neq y$}{
+					$ \Delta = |\sigma_x - \sigma_y| $\;
+					\If{$\gamma^* < \gamma_{xy}$ \&\& $\Delta^* > \Delta$ \&\& $\Delta^* \neq 0$ }{
+						$\sigma^* = avg(\sigma_x,\sigma_y)$ \;
+						$\Delta^* = \Delta$ \;
+						$\gamma^* = \gamma_{xy}$ \;
+					}
+				}
+			}
+		}
+	}{ $\sigma^* =\sigma_{xy=00} $ \; } 
+	\caption{Finest Tuning for Optimal Scale Estimation}
+	\label{algorithm-1}
+\end{algorithm}
+
+\newpage
+
+\section{Appendix}
+
+\newpage
+\renewcommand*{\bibname}{\section{References}}
+\bibliographystyle{ieeetr}
+\bibliography{Thesis}	
