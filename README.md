@@ -20,7 +20,7 @@ If you are using Tex-Studio, use multiple times <kbd>F1</kbd>, and <kbd>F8</kbd>
 ## Signature Page
 You can add your digital signature. Just update the `includes/sig.png` file.
 ## Block Diagram
-For creating the block diagram, I highly recommend **[Mathcha.io](https://www.mathcha.io/editor)**, it is a tool which convert your graphics to Late.
+For creating the block diagram, I highly recommend **[Mathcha.io](https://www.mathcha.io/editor)**, it is a tool which convert your graphics to Latex.
 ## Graphs
 For adding the graphs. I highly recommend using Tikz. You can find example in Section II of `Chapter.5.tex`.
 ## References
