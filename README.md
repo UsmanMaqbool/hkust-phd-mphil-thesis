@@ -13,7 +13,7 @@ Whole Ph.D. thesis structure is similar. Moreover, I've added all details with s
 
 ## Download and Run
 
-Just clone the repository / download using the zip file. Make sure, you are `miktex` / `latex-live` pre-installed in your PC. For the editor, `Tex-Studio` or `VS-Code` is recommended.
+Just clone / download using the zip file the [github repository](https://github.com/UsmanMaqbool/hkust-phd-thesis) . Make sure, you are `miktex` / `latex-live` pre-installed in your PC. For the editor, `Tex-Studio` or `VS-Code` is recommended.
 
 If you are using Tex-Studio, use multiple times <kbd>F1</kbd>, and <kbd>F8</kbd> for the bibliography of the each chapter. You might need to compile aux files as well. See [Compilation Error](#compilation-error) below.
 
@@ -31,7 +31,7 @@ We used single bib file `Thesis.bib` which has all the references. Each chapter 
 
 If the references are not generated successfully, or you are facing problem with a particular chapter. 
 
-**For example:** Ch. 2 references are not updated after the compilation. To fix this, you have to open the `chapter2.aux' in the tex studio, and press` <kbd>F8</kbd>, so that the references could be updated. Afterwards you will be able to compile them easily.
+**For example:** If chapter 2 references are not updating after the compilation. To fix this, you have to open the `chapter2.aux' in the tex studio, and press` <kbd>F8</kbd>, so that the references could be updated. Afterwards you will be able to compile them easily.
 
 
 
