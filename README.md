@@ -1,4 +1,4 @@
-# HKUST PhD Thesis
+# HKUST PhD Thesis Latex Template
 
 <p align="center">
   ⭐️ If you like this repository, give it a star on GitHub! ⭐️
