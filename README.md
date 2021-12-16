@@ -15,6 +15,8 @@ Whole Ph.D. thesis structure is similar. Moreover, I've added all details with s
 
 Just clone the repository / download using the zip file. Make sure, you are `miktex` / `latex-live` pre-installed in your PC. For the editor, `Tex-Studio` or `VS-Code` is recommended.
 
+If you are using Tex-Studio, use multiple times <kbd>F1</kbd>, and <kbd>F8</kbd> for the bibliography of the each chapter. You might need to compile aux files as well. See [Compilation Error](#compilation-error) below.
+
 ## Signature Page
 You can add your digital signature. Just update the `includes/sig.png` file.
 ## Block Diagram
@@ -27,9 +29,9 @@ We used single bib file `Thesis.bib` which has all the references. Each chapter 
 
 ### Compilation Error
 
-If the references are not generated successfully, or you are facing problem with a particular section. 
+If the references are not generated successfully, or you are facing problem with a particular chapter. 
 
-**For example:** Ch. 2 references are not updated after the compilation. To fix this, you have to open the `chapter2.aux' in the tex studio, and press `F8', so that the references could be updated. Afterwards you will be able to compile them easily.
+**For example:** Ch. 2 references are not updated after the compilation. To fix this, you have to open the `chapter2.aux' in the tex studio, and press` <kbd>F8</kbd>, so that the references could be updated. Afterwards you will be able to compile them easily.
 
 
 
