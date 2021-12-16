@@ -7,7 +7,7 @@
   <a href="#license"><img src="https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000"></a>
 </p>
 
-Author: [M. Usman Maqbool Bhutta](https://usmanmaqbool.github.io/why-so-deep)
+Author: [Muhammad Usman Maqbool Bhutta](https://usmanmaqbool.github.io/why-so-deep)
 
 Whole Ph.D. thesis structure is similar. Moreover, I've added all details with some templates related to inserting **signature**, **equations**, **tables**, **images**, **algorithms** in the tex files.
 
