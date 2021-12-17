@@ -13,7 +13,7 @@ Whole Ph.D. thesis structure is similar. Moreover, I've added all details with s
 
 ## Download and Run
 
-Just clone / download using the zip file the [github repository](https://github.com/UsmanMaqbool/hkust-phd-thesis) . Make sure, you are `miktex` / `latex-live` pre-installed in your PC. For the editor, `Tex-Studio` or `VS-Code` is recommended.
+Just clone / download using the zip file the [github repository](https://github.com/UsmanMaqbool/hkust-phd-mphil-thesis) . Make sure, you are `miktex` / `latex-live` pre-installed in your PC. For the editor, `Tex-Studio` or `VS-Code` is recommended.
 
 If you are using Tex-Studio, use multiple times <kbd>F1</kbd>, and <kbd>F8</kbd> for the bibliography of the each chapter. You might need to compile aux files as well. See [Compilation Error](#compilation-error) below.
 
